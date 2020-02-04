@@ -20,6 +20,7 @@ public class updateFrom23 {
 
 
     @RequiresPermission(ACCESS_FINE_LOCATION)
+
     public void test_ACCESS_FINE_LOCATION()
     {
         /************
@@ -33,7 +34,13 @@ public class updateFrom23 {
 
             }
         };
-        locationManager.addNmeaListener(nmeaListener);
+        OnNmeaMessageListener onNmeaMessageListener = new OnNmeaMessageListener() {
+            @Override
+            public void onNmeaMessage(String message, long timestamp) {
+                //test
+            }
+        };
+        locationManager.addNmeaListener(onNmeaMessageListener);
 //        locationManager.addNmeaListener()
         /**************************/
 
