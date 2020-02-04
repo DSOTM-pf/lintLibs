@@ -1,12 +1,25 @@
 package com.wyb.libtest24;
 
+import androidx.annotation.RequiresPermission;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.TargetApi;
+import android.content.Context;
 import android.location.GpsStatus;
 import android.location.LocationManager;
+import android.location.OnNmeaMessageListener;
+import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.util.Log;
+
+import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 public class updateFrom23 {
 
     LocationManager locationManager;
+
+
+    @RequiresPermission(ACCESS_FINE_LOCATION)
     public void test_ACCESS_FINE_LOCATION()
     {
         /************
@@ -20,7 +33,6 @@ public class updateFrom23 {
 
             }
         };
-
         locationManager.addNmeaListener(nmeaListener);
 //        locationManager.addNmeaListener()
         /**************************/
