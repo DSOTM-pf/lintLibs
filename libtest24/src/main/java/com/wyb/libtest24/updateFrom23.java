@@ -18,7 +18,6 @@ public class updateFrom23 {
 
     LocationManager locationManager;
 
-
     @RequiresPermission(ACCESS_FINE_LOCATION)
 
     public void test_ACCESS_FINE_LOCATION()
